@@ -1,0 +1,461 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyN4nHe2upJqg1ozYcTVkiW+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/MakarovaVS/-/blob/main/%D0%9B%D0%B0%D0%B1.%203%20%D0%9C%D0%B0%D0%BA%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%20%D0%92.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZRvtY3odepwn"
+      },
+      "source": [
+        "№ 3.2.1\n",
+        "\n",
+        "Составьте программу, которая запрашивает у пользователя 2 целых числа и выполняет операции:\n",
+        "\n",
+        "арифметические: +, -, * , / , // , %, **;\n",
+        "\n",
+        "сравнение: <, <=, >, >=, !=, ==,\n",
+        "\n",
+        "выводя на экран результат каждого действия. В случае получение вещественного результата, округлите его до 2-х знаков после запятой (используя функцию round())."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7wssmeJ9e4Ar",
+        "outputId": "646ac0f7-5a50-46d1-8277-852730b2a4e2"
+      },
+      "source": [
+        "# Задание task_03_02_01.\n",
+        "#\n",
+        "# Выполнил: Фамилия Макарова В.С.\n",
+        "# Группа: АДЭУ-211\n",
+        "# Электронная почта:  Makarova_VS@mgpu.ru\n",
+        "\n",
+        "\n",
+        "a = int(input(\"a=\"))\n",
+        "b = int(input(\"b=\"))\n",
+        "\n",
+        "print(a+b)\n",
+        "print(a-b)\n",
+        "print(a*b)\n",
+        "print(round(a/b,2))\n",
+        "print(a//b)\n",
+        "print(a%b)\n",
+        "print(a**b)\n",
+        "\n",
+        "\n",
+        "print(a<b)\n",
+        "print(a>b)\n",
+        "print(a<=b)\n",
+        "print(a>=b)\n",
+        "print(a!=b)\n",
+        "print(a==b)"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a=2\n",
+            "b=3\n",
+            "5\n",
+            "-1\n",
+            "6\n",
+            "0.67\n",
+            "0\n",
+            "2\n",
+            "8\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MTUALchck_20"
+      },
+      "source": [
+        " № 3.2.2\n",
+        "\n",
+        "Вычислите значение следующего выражения (аргументы - целые числа и вводятся с клавиатуры):\n",
+        "\n",
+        "Округлите результат до 3-х знаков после запятой, используя функцию round()."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YHFA-mtMcKTW",
+        "outputId": "7760db3f-9996-4aef-baf3-c3309afbfaad"
+      },
+      "source": [
+        "# Задание task_03_02_02.\n",
+        "#\n",
+        "# Выполнил: Макароова В.С.\n",
+        "# Группа:АДЭУ-211\n",
+        "# Электронная почта:  Makarova_VS@mgpu.ru\n",
+        "\n",
+        "\n",
+        "\n",
+        "x =0\n",
+        "y =1\n",
+        "z =2\n",
+        "\n",
+        "res1 =((x**5+7)/(abs(-6)*y))**(1/3)\n",
+        "res2 =7-(z % y)\n",
+        "res=res1/res2\n",
+        "print(round(res,2))\n"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0.15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tpL-EHr8cftQ"
+      },
+      "source": [
+        "№ 3.2.3\n",
+        "\n",
+        "Дана электрическая цепь, состоящая из 2-х последовательно соединенных проводников (сопротивление каждого известно). Найти общее сопротивление цепи (округление результата необходимо выполнить до 1-го знака после запятой).\n",
+        "\n",
+        "Решение (начало и общий ход мыслей):\n",
+        "\n",
+        "Аналитическое решение.\n",
+        "\n",
+        "Проводники соединены последовательно, поэтому общее сопротивление цепи будет равно сумме их сопротивлений. Сопротивление может быть вещественным числом, поэтому для его хранения необходимо выбрать тип float.\n",
+        "\n",
+        "Алгоритм.\n",
+        "\n",
+        "ввести 2 вещественных значения - сопротивления проводников;\n",
+        "вычислить их сумму;\n",
+        "вывести ответ на экран. Программа."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IDVgEohrcfZQ",
+        "outputId": "2624f710-3b29-4322-9b5e-36a614cbfc9d"
+      },
+      "source": [
+        "# Задание task_03_02_03.\n",
+        "#\n",
+        "# Выполнил: Макарова В.С.\n",
+        "# Группа: АДЭУ-211\n",
+        "# Электронная почта:  Makarova_VS@mgpu.ru\n",
+        "\n",
+        "\n",
+        "\n",
+        "r1 =13.1\n",
+        "r2 = 15.2\n",
+        "r = r1 + r2\n",
+        "print (float (round(r,1)))\n"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "28.3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xy7lB_DzcvKz"
+      },
+      "source": [
+        "№ 3.2.4\n",
+        "\n",
+        "Дано двузначное и трехзначное число. Для каждого выведите на экран сумму и произведение цифр."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PbO-b6VDcvmN",
+        "outputId": "ac4cad87-5a1b-450e-d5a8-60af3e4aea73"
+      },
+      "source": [
+        "# Задание task_03_02_04.\n",
+        "#\n",
+        "# Выполнил: Макарова В.С.\n",
+        "# Группа: АДЭУ-211\n",
+        "# Электронная почта:  Makarova_VS@mgpu.ru\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "num2 =13\n",
+        "num3 =185\n",
+        "num2_1 = 1\n",
+        "num2_2 =3\n",
+        "num2_s =4\n",
+        "num2_p =3\n",
+        "num3_1 = 1\n",
+        "num3_2 = 8\n",
+        "num3_3 = 5\n",
+        "num3_s = 14\n",
+        "num3_p = 40\n",
+        "print (num2_s)\n",
+        "print (num2_p)\n",
+        "print (num3_s)\n",
+        "print (num3_p)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n",
+            "3\n",
+            "14\n",
+            "40\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tOEfWkoidARI"
+      },
+      "source": [
+        "№ 3.2.5\n",
+        "\n",
+        "С начала суток прошло m минут (0<m≤24∗60). Определите:\n",
+        "\n",
+        "целое количество часов, прошедших с начала суток;\n",
+        "\n",
+        "количество минут, прошедших с момента начала последнего часа.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-9lxGL4ydUez",
+        "outputId": "f4114eb8-d95a-4237-b605-aafadf747384"
+      },
+      "source": [
+        "# Выполнил: Макарова В.С.\n",
+        "# Группа: АДЭУ-211\n",
+        "# Электронная почта:  Makarova_VS@mgpu.ru\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "m = 89\n",
+        "h=60\n",
+        "h1 =int(m/h)\n",
+        "              # Количество минут, прошедших с момента начала последнего часа\n",
+        "m2=m-h\n",
+        "print (m)\n",
+        "print(h1)\n",
+        "print(m2)\n",
+        "\n"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "89\n",
+            "1\n",
+            "29\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "z40OxrG7dbaj"
+      },
+      "source": [
+        "№ 3.2.6\n",
+        "\n",
+        "Дано уравнение ax + b = 0 и отрезок [m;n]. Ответьте на вопрос, попадает ли решение уравнения в указанный отрезок.\n",
+        "\n",
+        "Решение (начало и общий ход мыслей):\n",
+        "\n",
+        "Аналитическое решение.\n",
+        "\n",
+        "Коэффициенты уравнения и величина отрезка - произвольны, возьмем целые числа. Решение x при этом может быть дробным. После определения x составим логическое выражение попадания в отрезок, что и будет ответом.\n",
+        "\n",
+        "Алгоритм.\n",
+        "\n",
+        "ввести все неизвестные величины;\n",
+        "определить корень уравнения;\n",
+        "составить логическое выражение попадания корня в область;\n",
+        "вывести результат попадания на экран. Программа."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RRxuEjIidcgn",
+        "outputId": "d1fe0038-ce57-4a5a-8b61-ae542e491269"
+      },
+      "source": [
+        "# Задание task_03_02_06.\n",
+        "#\n",
+        "# Выполнил: Макарова В.С.\n",
+        "# Группа: АДЭУ-211\n",
+        "# Электронная почта: Makarova_VS@mgpu.ru\n",
+        "\n",
+        "\n",
+        "\n",
+        "a = 2\n",
+        "b = 4\n",
+        "m = -7\n",
+        "n = 8\n",
+        "x=-b/a\n",
+        "is_ok =(x>m) and (x<n)\n",
+        "\n",
+        "print(\"Попадает:\", is_ok)\n"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Попадает: True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "f7XcqWJ-dxcS"
+      },
+      "source": [
+        "Составьте программу, которая запрашивает название футбольной команды и повторяет его на экране со словами\n",
+        "\n",
+        "... - чемпион! После этого выполните:\n",
+        "\n",
+        "используя операцию дублирования, нарисуйте черту (набор \"-\"), длиной, равной размеру названия команды;\n",
+        "\n",
+        "преобразуйте строку в нижний регистр и выведите на экран:\n",
+        "\n",
+        "длину наименования команды;\n",
+        "\n",
+        "есть ли в наименовании команды буква \"п\" (True/False)?\n",
+        "\n",
+        "сколько раз повторяется буква \"а\"?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J-Zs8MZ0dyXA",
+        "outputId": "96e854ae-7966-4dd4-f430-8bdae0f7b144"
+      },
+      "source": [
+        "# Задание task_03_02_07.\n",
+        "#\n",
+        "# Выполнил: Макарова В.С.\n",
+        "# Группа: АДЭУ-211\n",
+        "# Электронная почта: Makarova_VS@mgpu.ru\n",
+        "\n",
+        "\n",
+        "team = input(\"введите название команды:\")\n",
+        "l=len(team)\n",
+        "s=\"-\"\n",
+        "print(s*l)\n",
+        "print(str.lower(team))\n",
+        "print (l)\n",
+        "print ('n'in team)\n",
+        "print(team.count('a'))\n",
+        "print(team+\"-чемпион!\")\n",
+        " "
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "введите название команды:jhks\n",
+            "----\n",
+            "jhks\n",
+            "4\n",
+            "False\n",
+            "0\n",
+            "jhks-чемпион!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
